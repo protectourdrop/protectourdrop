@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect Our Drop | Malaysian Scientific Outreach Team</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        waterDeep: '#0c4a6e',
+                        waterMain: '#0284c7',
+                        waterLight: '#38bdf8',
+                        waterFoam: '#e0f2fe',
+                        waterTeal: '#0d9488',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @keyframes fade-in-up {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+        }
+        .glass-water {
+            background: rgba(2, 132, 199, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+        }
+
+        body {
+            position: relative;
+            background-color: #e0f2fe;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .bg-water-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15; 
+            z-index: -999;
+        }
+    </style>
+</head>
+<body class="text-slate-800 overflow-x-hidden">
+
+    <!-- Background Image Layer -->
+    <div class="bg-water-image"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-water bg-white/80 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-droplet text-waterMain text-2xl animate-pulse"></i>
+                    <span class="font-bold text-xl text-waterDeep tracking-tight">Protect Our Drop</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 font-medium">
+                    <a href="#about" class="text-slate-600 hover:text-waterMain transition-colors">About</a>
+                    <a href="#science" class="text-slate-600 hover:text-waterMain transition-colors">Science</a>
+                    <a href="#poster-section" class="text-slate-600 hover:text-waterMain transition-colors">Posters</a>
+                    <a href="#interactive" class="text-slate-600 hover:text-waterMain transition-colors">Action</a>
+                    <a href="#media" class="text-slate-600 hover:text-waterMain transition-colors">Media</a>
+                    <a href="#team" class="text-slate-600 hover:text-waterMain transition-colors">Team</a>
+                    
+                    <!-- Live View Counter Badge in Navbar -->
+                    <div class="inline-flex items-center gap-1.5 text-xs font-semibold text-waterDeep bg-sky-100 border border-sky-300 py-1.5 px-3 rounded-full shadow-sm" title="Total Page Views">
+                        <i class="fa-solid fa-eye text-waterMain"></i> 
+                        <span>Views: <strong id="navbar-view-count">1,024</strong></span>
+                    </div>
+
+                    <!-- Navbar Instagram Badge -->
+                    <a href="https://instagram.com/protectourdrop.my" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-pink-600 bg-pink-50 hover:bg-pink-100 border border-pink-200 py-1.5 px-3 rounded-full transition shadow-sm">
+                        <i class="fa-brands fa-instagram"></i> @protectourdrop.my
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Header / Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 text-white overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('6109659913245102767.jpg');">
+        <div class="absolute inset-0 bg-slate-950/65 z-0"></div>
+
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+            <div class="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-waterLight/20 blur-[120px]"></div>
+            <div class="absolute top-1/3 right-[-10%] w-[450px] h-[450px] rounded-full bg-waterMain/25 blur-[140px]"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up">
+            <!-- Primary Advocacy Badge (Sentence Case) -->
+            <div class="inline-flex items-center gap-2 py-2 px-6 rounded-full bg-waterMain/40 border-2 border-waterLight/50 text-waterLight text-sm font-semibold tracking-normal mb-6 backdrop-blur-md shadow-lg shadow-waterMain/20">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Translating hydrological science into community action for sustainable water and environmental protection.</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                Protect Our Drop:<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-waterLight via-sky-100 to-cyan-300">Safeguarding Malaysia’s Water Security</span>
+            </h1>
+            
+            <!-- Secondary Contextual Course Sentence -->
+            <p class="mt-2 max-w-2xl text-xs md:text-sm mx-auto text-sky-200/90 mb-8 font-medium tracking-wide">
+                Presented as an advocacy initiative for the Information Technology FSC0643 course assessment at the National Defence University of Malaysia.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#poster-section" class="px-8 py-4 bg-waterMain hover:bg-waterDeep text-white rounded-lg font-semibold shadow-lg shadow-waterMain/30 transition-all border border-waterLight/30">
+                    View Campaign Posters
+                </a>
+                <a href="#pledge-section" class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white rounded-lg font-semibold transition-all backdrop-blur-sm">
+                    Sign the Pledge
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <span class="text-xs font-bold text-waterMain uppercase tracking-wider mb-2 block">FCS0643 Information Technology Evaluation</span>
+                    <h2 class="text-3xl font-bold text-waterDeep mb-6 border-l-4 border-waterMain pl-4">The Current Landscape & Purpose</h2>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        Crafted as an official assessment deliverable for the course <strong>FCS0643 Information Technology</strong>, this project confronts a striking Malaysian paradox: abundant annual rainfall juxtaposed with persistent, disruptive water shortages. 
+                    </p>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        With national domestic consumption per-capita exceeding sustainable international metrics, urban expansion and pollution heavily strain our river catchments. By leveraging modern digital tools, we bridge scientific research with public engagement.
+                    </p>
+                    
+                    <div class="bg-sky-50/90 rounded-xl p-6 border border-sky-100">
+                        <h3 class="font-bold text-waterDeep text-xl mb-2"><i class="fa-solid fa-eye mr-2 text-waterMain"></i>Our Vision</h3>
+                        <p class="text-slate-700 text-sm mb-4">To foster a water-secure Malaysia where digitally empowered citizens proactively conserve and protect vital aquatic ecosystems.</p>
+                        
+                        <h3 class="font-bold text-waterTeal text-xl mb-2"><i class="fa-solid fa-bullseye mr-2 text-waterTeal"></i>Our Mission</h3>
+                        <p class="text-slate-700 text-sm">To dispel public misconceptions, disseminate vital hydrological insights, and cultivate lifelong resource-saving habits through innovative digital platforms.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-slate-900 rounded-2xl shadow-2xl p-6 border border-sky-900 text-center flex flex-col justify-between">
+                        <div class="cursor-pointer group mb-4" onclick="openModal('aboutImageModal')">
+                            <div class="overflow-hidden rounded-xl border-2 border-waterMain/40 relative">
+                                <img src="6109659913245102758.jpg" alt="Sustainable Water Futures Overview" class="w-full h-auto object-cover max-h-[380px] group-hover:scale-105 transition duration-300">
+                                <div class="absolute inset-0 bg-waterDeep/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-semibold">
+                                    <i class="fa-solid fa-magnifying-glass-plus mr-2 text-xl text-waterLight"></i> Click to Zoom Diagram
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Sustainable Water Futures</h3>
+                        <p class="text-sky-200/80 text-xs mb-4">A structured schematic highlighting rainwater harvesting, advanced municipal treatment, and automated catchment defense.</p>
+                        <button onclick="openModal('aboutImageModal')" class="py-2.5 px-4 bg-waterMain hover:bg-waterDeep text-white font-bold rounded-xl text-sm transition shadow-md border border-waterLight/30">Preview Full Diagram</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEWLY ADDED: River Conservation Video Feature in About Section -->
+            <div class="bg-gradient-to-br from-waterDeep via-[#0284c7]/90 to-waterTeal rounded-3xl overflow-hidden shadow-2xl border-4 border-waterMain/30 p-8 lg:p-12 max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-5 text-white space-y-4">
+                        <span class="bg-white/10 text-waterLight text-xs font-semibold px-3 py-1 rounded-full border border-white/20"><i class="fa-solid fa-water mr-1"></i> River Ecosystems Overview</span>
+                        <h3 class="text-2xl md:text-3xl font-bold">Protecting Our Lifeblood</h3>
+                        <p class="text-sky-100 text-sm leading-relaxed">
+                            Rivers form the core of our environmental network. Watch our introductory video featuring community field cleanup efforts, scientific water testing, and the active steps required to preserve our natural riverbanks.
+                        </p>
+                        <div class="flex items-center gap-3 text-xs text-sky-200 pt-2">
+                            <i class="fa-solid fa-circle-play text-waterLight text-base"></i>
+                            <span>Field insights on waste disposal and river preservation</span>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-white/30 bg-black">
+                            <video controls class="w-full h-full object-cover">
+                                <source src="video3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Sustainable Water Futures Image -->
+    <div id="aboutImageModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
+        <div class="relative max-w-4xl flex flex-col items-center">
+            <button onclick="closeModal('aboutImageModal')" class="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-waterLight">&times; Close</button>
+            <img src="6109659913245102758.jpg" class="max-w-full max-h-[80vh] rounded-xl object-contain border-2 border-waterMain">
+        </div>
+    </div>
+
+    <!-- Science Section -->
+    <section id="science" class="py-20 bg-white/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-waterTeal uppercase tracking-wider mb-2 block">Methodology & Framework</span>
+                <h2 class="text-3xl font-bold text-waterDeep mb-4">Advocacy Objectives & Scientific Core</h2>
+                <p class="text-slate-600">Our assessment framework combines technical outreach with environmental science to foster enduring behavioral shifts.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-sky-50/80 rounded-xl p-8 shadow-lg border-t-4 border-waterMain border-x border-b border-sky-100">
+                    <div class="w-12 h-12 bg-waterMain/10 rounded-full flex items-center justify-center mb-6 text-waterMain">
+                        <i class="fa-solid fa-book-open text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-waterDeep mb-3">1. Public Literacy</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Advancing community awareness regarding municipal water sourcing, hydrological processing, and economic costs.</p>
+                </div>
+                <div class="bg-sky-50/80 rounded-xl p-8 shadow-lg border-t-4 border-waterTeal border-x border-b border-sky-100">
+                    <div class="w-12 h-12 bg-waterTeal/10 rounded-full flex items-center justify-center mb-6 text-waterTeal">
+                        <i class="fa-solid fa-arrows-rotate text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-waterDeep mb-3">2. Habitual Change</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Providing streamlined, actionable techniques enabling households to drastically diminish daily water footprints.</p>
+                </div>
+                <div class="bg-sky-50/80 rounded-xl p-8 shadow-lg border-t-4 border-waterDeep border-x border-b border-sky-100">
+                    <div class="w-12 h-12 bg-waterDeep/10 rounded-full flex items-center justify-center mb-6 text-waterDeep">
+                        <i class="fa-solid fa-leaf text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-waterDeep mb-3">3. Environmental Stewardship</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Empowering individuals to protect local watersheds and advocate for progressive, sustainable policy enforcement.</p>
+                </div>
+            </div>
+
+            <!-- Infographic Poster Feature -->
+            <div class="bg-gradient-to-b from-waterDeep to-[#0b253a] rounded-3xl p-6 md:p-10 shadow-2xl border-4 border-waterMain/40 text-white max-w-5xl mx-auto mb-16">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="bg-white/10 text-waterLight text-xs font-semibold px-3 py-1 rounded-full border border-white/20 uppercase tracking-wider">Scientific Infographic Overview</span>
+                    <h3 class="text-2xl md:text-3xl font-bold mt-3">Public Literacy: Advancing Community Awareness</h3>
+                    <p class="text-sky-200 text-sm mt-2">Municipal water sourcing, the hydrological cycle, treatment steps, and community actions.</p>
+                </div>
+                <div class="flex justify-center mb-6">
+                    <div class="relative group cursor-pointer" onclick="openModal('scienceInfographicModal')">
+                        <div class="w-full bg-white rounded-2xl overflow-hidden shadow-2xl border-4 border-white max-h-[500px]">
+                            <img src="photo_2026-09-04_20-45-23.jpg" alt="Public Literacy Infographic" class="w-full h-auto object-contain group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="absolute inset-0 bg-waterDeep/40 opacity-0 group-hover:opacity-100 transition rounded-xl flex items-center justify-center text-white font-semibold">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-2 text-xl text-waterLight"></i> Click to Zoom Infographic
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="openModal('scienceInfographicModal')" class="py-3 px-6 bg-waterMain hover:bg-waterLight text-white font-bold rounded-xl text-sm transition shadow-md border border-waterLight/30">Preview Infographic</button>
+                    <a href="photo_2026-09-04_20-45-23.jpg" download class="py-3 px-6 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl text-center text-sm border border-slate-700 transition">Download Infographic</a>
+                </div>
+            </div>
+
+            <!-- Video Showcase Section Integrated into Science Section -->
+            <div class="bg-gradient-to-br from-waterDeep via-[#0284c7]/90 to-waterTeal rounded-3xl overflow-hidden shadow-2xl border-4 border-waterMain/30 p-8 lg:p-12 max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-5 text-white space-y-4">
+                        <span class="bg-white/10 text-waterLight text-xs font-semibold px-3 py-1 rounded-full border border-white/20">FCS0643 Assessment Output</span>
+                        <h3 class="text-2xl md:text-3xl font-bold">Protect Our Drop Advocacy Film</h3>
+                        <p class="text-sky-100 text-sm leading-relaxed">
+                            An eloquent cinematic synthesis of Malaysia's ecological hurdles, demonstrating practical domestic water conservation metrics and digital community mobilization.
+                        </p>
+                        <div class="flex items-center gap-3 text-xs text-sky-200 pt-2">
+                            <i class="fa-solid fa-circle-play text-waterLight text-base"></i>
+                            <span>High-definition analytical breakdown & field study</span>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-white/30 bg-black">
+                            <video controls class="w-full h-full object-cover">
+                                <source src="video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science Infographic Modal -->
+    <div id="scienceInfographicModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
+        <div class="relative max-w-5xl flex flex-col items-center">
+            <button onclick="closeModal('scienceInfographicModal')" class="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-waterLight">&times; Close</button>
+            <img src="photo_2026-09-04_20-45-23.jpg" class="max-w-full max-h-[85vh] rounded-xl object-contain border-2 border-waterMain bg-white">
+        </div>
+    </div>
+
+    <!-- Poster Section -->
+    <section id="poster-section" class="py-20 bg-sky-50/80 backdrop-blur-sm border-y border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block py-1 px-4 rounded-full bg-waterMain/10 text-waterDeep text-xs font-bold tracking-wider uppercase mb-3 border border-waterMain/20"><i class="fa-solid fa-file-image mr-1 text-waterMain"></i> Official Advocacy Collateral</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-waterDeep mb-4">Campaign Information Posters</h2>
+                <p class="text-slate-600">Review our dual-variant visual assets designed specifically for the FCS0643 assignment campaign.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Poster 1 -->
+                <div class="bg-gradient-to-b from-waterDeep to-[#0b253a] rounded-3xl p-6 md:p-8 shadow-2xl border-2 border-waterMain/40 text-white flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-center mb-6">
+                            <div class="relative group cursor-pointer" onclick="openModal('posterModal1')">
+                                <div class="w-full max-w-xs bg-white rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                                    <img src="6109659913245102744_2.jpg" alt="Protect Our Drop Poster Variant 1" class="w-full h-auto object-cover max-h-[400px]">
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-sky-100">Hydrological Cycle & Catchment Focus</h3>
+                    </div>
+                    <div class="flex gap-3 mt-4">
+                        <button onclick="openModal('posterModal1')" class="flex-1 py-3 bg-waterMain hover:bg-waterLight text-white font-bold rounded-xl text-center text-sm shadow transition">Preview</button>
+                        <a href="6109659913245102744_2.jpg" download class="py-3 px-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl text-center text-sm border border-slate-700 transition">Download</a>
+                    </div>
+                </div>
+
+                <!-- Poster 2 -->
+                <div class="bg-gradient-to-b from-waterDeep to-[#0b253a] rounded-3xl p-6 md:p-8 shadow-2xl border-2 border-waterMain/40 text-white flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-center mb-6">
+                            <div class="relative group cursor-pointer" onclick="openModal('posterModal2')">
+                                <div class="w-full max-w-xs bg-white rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                                    <img src="6109659913245102745_2.jpg" alt="Protect Our Drop Poster Variant 2" class="w-full h-auto object-cover max-h-[400px]">
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-sky-100">Community Pledge & Home Audit Focus</h3>
+                    </div>
+                    <div class="flex gap-3 mt-4">
+                        <button onclick="openModal('posterModal2')" class="flex-1 py-3 bg-waterTeal hover:bg-teal-600 text-white font-bold rounded-xl text-center text-sm shadow transition">Preview</button>
+                        <a href="6109659913245102745_2.jpg" download class="py-3 px-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl text-center text-sm border border-slate-700 transition">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poster Modals -->
+    <div id="posterModal1" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
+        <div class="relative max-w-4xl flex flex-col items-center">
+            <button onclick="closeModal('posterModal1')" class="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-waterLight">&times; Close</button>
+            <img src="6109659913245102744_2.jpg" class="max-w-full max-h-[80vh] rounded-lg object-contain border-2 border-waterMain">
+        </div>
+    </div>
+    <div id="posterModal2" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
+        <div class="relative max-w-4xl flex flex-col items-center">
+            <button onclick="closeModal('posterModal2')" class="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-waterLight">&times; Close</button>
+            <img src="6109659913245102745_2.jpg" class="max-w-full max-h-[80vh] rounded-lg object-contain border-2 border-waterTeal">
+        </div>
+    </div>
+
+    <!-- Action Section -->
+    <section id="interactive" class="py-20 bg-gradient-to-br from-waterDeep to-waterMain relative text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <span class="bg-white/10 text-waterLight text-xs font-semibold px-3 py-1 rounded-full border border-white/20 uppercase tracking-wider">Campaign Action Hub</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-4">Engage & Commit</h2>
+                <p class="text-sky-100">Review our action infographic, watch the water pledge demonstration, test your ecological knowledge, and join our national digital movement.</p>
+            </div>
+
+            <!-- Action Infographic Poster Feature -->
+            <div class="bg-gradient-to-b from-slate-900 to-[#0b253a] rounded-3xl p-6 md:p-10 shadow-2xl border-4 border-waterMain/40 text-white max-w-5xl mx-auto mb-16">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="bg-waterMain/30 text-waterLight text-xs font-semibold px-3 py-1 rounded-full border border-waterLight/30 uppercase tracking-wider">Core Campaign Infographic</span>
+                    <h3 class="text-2xl md:text-3xl font-bold mt-3">Every Drop Counts, Every Action Matters</h3>
+                    <p class="text-sky-200 text-sm mt-2">Explore water footprint definitions, green/blue/grey water breakdowns, and practical household steps.</p>
+                </div>
+                <div class="flex justify-center mb-6">
+                    <div class="relative group cursor-pointer" onclick="openModal('actionInfographicModal')">
+                        <div class="w-full bg-white rounded-2xl overflow-hidden shadow-2xl border-4 border-white max-h-[550px]">
+                            <img src="photo_2026-09-04_20-55-34.jpg" alt="Every Drop Counts Action Infographic" class="w-full h-auto object-contain group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="absolute inset-0 bg-waterDeep/40 opacity-0 group-hover:opacity-100 transition rounded-xl flex items-center justify-center text-white font-semibold">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-2 text-xl text-waterLight"></i> Click to Zoom Infographic
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="openModal('actionInfographicModal')" class="py-3 px-6 bg-waterMain hover:bg-waterLight text-white font-bold rounded-xl text-sm transition shadow-md border border-waterLight/30">Preview Infographic</button>
+                    <a href="photo_2026-09-04_20-55-34.jpg" download class="py-3 px-6 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl text-center text-sm border border-slate-700 transition">Download Infographic</a>
+                </div>
+            </div>
+
+            <!-- Action Infographic Modal -->
+            <div id="actionInfographicModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
+                <div class="relative max-w-5xl flex flex-col items-center">
+                    <button onclick="closeModal('actionInfographicModal')" class="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-waterLight">&times; Close</button>
+                    <img src="photo_2026-09-04_20-55-34.jpg" class="max-w-full max-h-[85vh] rounded-xl object-contain border-2 border-waterMain bg-white">
+                </div>
+            </div>
+
+            <!-- Video Pledge Feature in Action Section -->
+            <div class="bg-gradient-to-br from-slate-900 via-waterDeep to-slate-900 rounded-3xl overflow-hidden shadow-2xl border-4 border-waterMain/40 p-6 md:p-10 max-w-5xl mx-auto mb-16">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="bg-waterMain/30 text-waterLight text-xs font-semibold px-3 py-1 rounded-full border border-waterLight/30 uppercase tracking-wider"><i class="fa-solid fa-video mr-1"></i> Water Pledge Campaign Video</span>
+                    <h3 class="text-2xl md:text-3xl font-bold mt-3 text-white">"I Take The Water Pledge"</h3>
+                    <p class="text-sky-200 text-sm mt-2">Watch our community pledge demonstration video emphasizing why we must protect every single drop.</p>
+                </div>
+                <div class="relative max-w-3xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-waterMain/50 bg-black">
+                    <video controls class="w-full h-full object-cover">
+                        <source src="video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white text-slate-800 rounded-2xl shadow-2xl p-8 border border-waterLight/30" id="quiz-wrapper">
+                    <h3 class="text-2xl font-bold text-waterDeep mb-2">Water Footprint Quiz</h3>
+                    <div id="quiz-container"></div>
+                </div>
+
+                <div id="pledge-section" class="bg-waterDeep rounded-2xl shadow-2xl p-8 text-white border border-waterMain/40 relative overflow-hidden">
+                    <h3 class="text-2xl font-bold mb-2">Digital Water Pledge</h3>
+                    <p class="text-sky-200 text-sm mb-6">Commit to mindful resource consumption and planetary preservation.</p>
+                    <div class="bg-sky-950/60 rounded-xl p-6 mb-6 text-center border border-waterMain/30">
+                        <p class="text-3xl font-bold text-white"><span id="pledge-count" class="text-waterLight">1,245</span></p>
+                        <p class="text-sm text-sky-200">Malaysians Have Pledged!</p>
+                    </div>
+                    <form id="pledge-form">
+                        <input type="text" id="pledge-name" required placeholder="Your Full Name" class="w-full px-4 py-3 bg-sky-950/80 border border-waterMain/40 rounded-lg mb-4 text-white placeholder-sky-400 focus:outline-none focus:border-waterLight">
+                        <button type="submit" class="w-full py-3 bg-waterMain hover:bg-waterLight text-white font-bold rounded-lg transition shadow-lg">Submit My Pledge</button>
+                    </form>
+                    <div id="pledge-success" class="hidden absolute inset-0 bg-waterDeep z-20 flex flex-col items-center justify-center p-8 text-center">
+                        <h3 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-circle-check text-waterLight text-3xl mb-2 block"></i>Thank You!</h3>
+                        <p class="text-sky-100">Your digital pledge has been successfully recorded.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section with YouTube Integration -->
+    <section id="media" class="py-20 bg-white/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="inline-block py-1 px-4 rounded-full bg-waterMain/10 text-waterDeep text-xs font-bold tracking-wider uppercase mb-3 border border-waterMain/20"><i class="fa-solid fa-video mr-1 text-waterMain"></i> Media & Resources</span>
+                <h2 class="text-3xl font-bold text-waterDeep mb-4">Official YouTube Reference Video</h2>
+            </div>
+
+            <div class="bg-gradient-to-br from-slate-900 to-waterDeep rounded-3xl overflow-hidden shadow-2xl border-4 border-waterMain/30 p-8 lg:p-12 text-center">
+                <div class="max-w-3xl mx-auto mb-8">
+                    <span class="inline-block py-1 px-4 rounded-full bg-waterMain/20 border border-waterLight/30 text-waterLight text-xs font-semibold tracking-wider mb-3">Jabatan Alam Sekitar Official Advocacy Video</span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-3">Cegah Pencemaran Sungai</h3>
+                </div>
+
+                <div class="relative max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border border-waterMain/40 bg-black group">
+                    <img src="https://i.ytimg.com/vi/1-BUVIzHd5k/maxresdefault.jpg" alt="Cegah Pencemaran Sungai Thumbnail" class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition duration-500">
+                    <a href="https://youtu.be/1-BUVIzHd5k" target="_blank" rel="noopener noreferrer" class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-black/20 transition">
+                        <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl group-hover:scale-110 transition">
+                            <i class="fa-solid fa-play ml-1"></i>
+                        </div>
+                        <span class="text-white font-bold text-base mt-4 bg-waterDeep/90 px-6 py-2 rounded-full border border-waterMain/40">Watch on YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-sky-50/80 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-waterMain uppercase tracking-wider mb-2 block">FCS0643 Course Assessment Team</span>
+                <h2 class="text-3xl font-bold text-waterDeep mb-4">Meet the Outreach Team</h2>
+                <p class="text-slate-600">Dedicated student technologists translating scientific research into meaningful community action.</p>
+                <div class="mt-6">
+                    <a href="https://instagram.com/protectourdrop.my" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-pink-700 bg-pink-100 hover:bg-pink-200 border border-pink-300 py-2.5 px-6 rounded-full transition shadow-md">
+                        <i class="fa-brands fa-instagram text-pink-600 text-lg"></i> Follow our official campaign: @protectourdrop.my
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto gap-12 mb-12">
+                <!-- NUR ARIANIE BINTI MOHD ZUKI -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg text-center group border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="h-32 bg-waterMain/20 relative">
+                            <img src="1000112671.jpg" alt="Nur Arianie binti Mohd Zuki" class="w-28 h-28 rounded-full border-4 border-white absolute -bottom-14 left-1/2 transform -translate-x-1/2 object-cover shadow-md">
+                        </div>
+                        <div class="pt-16 pb-6 px-6">
+                            <h4 class="font-bold text-waterDeep text-lg sm:text-xl">Nur Arianie binti Mohd Zuki</h4>
+                            <p class="text-waterMain font-semibold text-sm mt-1">Information Technology FSC0634</p>
+                            <p class="text-slate-500 text-xs mt-1 mb-4">National Defence University of Malaysia</p>
+                            <div class="bg-sky-50 rounded-xl p-3 text-left border border-sky-100">
+                                <span class="text-xs font-bold text-waterDeep uppercase tracking-wider block mb-1"><i class="fa-solid fa-bullhorn text-waterMain mr-1"></i> Assessment Focus:</span>
+                                <p class="text-slate-600 text-xs leading-relaxed">Pioneering public literacy frameworks on Malaysian river catchments and raising awareness around domestic consumption targets.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Farah Elisha binti Mohamad Bahruddin -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg text-center group border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="h-32 bg-waterTeal/20 relative">
+                            <img src="1000113553.jpg" alt="Farah Elisha binti Mohamad Bahruddin" class="w-28 h-28 rounded-full border-4 border-white absolute -bottom-14 left-1/2 transform -translate-x-1/2 object-cover shadow-md">
+                        </div>
+                        <div class="pt-16 pb-6 px-6">
+                            <h4 class="font-bold text-waterDeep text-lg sm:text-xl">Farah Elisha binti Mohamad Bahruddin</h4>
+                            <p class="text-waterTeal font-semibold text-sm mt-1">Information Technology FSC0634</p>
+                            <p class="text-slate-500 text-xs mt-1 mb-4">National Defence University of Malaysia</p>
+                            <div class="bg-sky-50 rounded-xl p-3 text-left border border-sky-100">
+                                <span class="text-xs font-bold text-waterDeep uppercase tracking-wider block mb-1"><i class="fa-solid fa-bullhorn text-waterTeal mr-1"></i> Assessment Focus:</span>
+                                <p class="text-slate-600 text-xs leading-relaxed">Translating hydrological science into seamless digital tools, interactive footprint audits, and web-based community modules.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with View Counter Mention -->
+    <footer class="bg-slate-900 text-sky-200/70 py-12 border-t border-slate-800 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <div class="flex justify-center space-x-6">
+                <a href="https://instagram.com/protectourdrop.my" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sky-200 hover:text-pink-400 transition text-sm font-semibold bg-slate-800 px-4 py-2 rounded-full border border-slate-700">
+                    <i class="fa-brands fa-instagram text-pink-500 text-lg"></i> Instagram: @protectourdrop.my
+                </a>
+            </div>
+            <p class="text-sm">Total Page Visits: <strong id="footer-view-count" class="text-waterLight">1,024</strong></p>
+            <p>&copy; 2026 Malaysian Scientific Outreach Team. Course Assessment Project for FCS0643 Information Technology, National Defence University of Malaysia.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Modal Handlers
+        function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+        function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+
+        // Live Page View Counter Script using localStorage
+        document.addEventListener("DOMContentLoaded", function() {
+            let views = localStorage.getItem('protectOurDropViews');
+            if (!views) {
+                views = 1042;
+            } else {
+                views = parseInt(views) + 1;
+            }
+            localStorage.setItem('protectOurDropViews', views);
+            
+            let formattedViews = views.toLocaleString();
+            document.getElementById('navbar-view-count').innerText = formattedViews;
+            document.getElementById('footer-view-count').innerText = formattedViews;
+        });
+
+        // Quiz Logic
+        const quizData = [
+            { question: "What is the average daily domestic water consumption per capita in Malaysia?", options: ["Around 150L", "Around 165L", "Over 200L", "Under 100L"], correct: 2, explanation: "Malaysia's consumption frequently exceeds 200 liters per person daily." },
+            { question: "What primarily describes Urban Surface Runoff?", options: ["Underground water aquifers", "Rainwater flowing over non-porous concrete into storm drains", "Advanced drinking water filtration", "Air conditioning condensation"], correct: 1, explanation: "Impermeable urban surfaces prevent natural ground absorption." }
+        ];
+        let currentQ = 0, score = 0;
+        const quizContainer = document.getElementById('quiz-container');
+
+        function loadQuiz() {
+            if (currentQ >= quizData.length) {
+                quizContainer.innerHTML = `<div class="text-center py-6"><h4 class="text-2xl font-bold text-waterDeep">Assessment Quiz Complete! Score: ${score}/${quizData.length}</h4></div>`;
+                return;
+            }
+            const q = quizData[currentQ];
+            let html = `<h4 class="font-semibold mb-4 text-waterDeep">${q.question}</h4><div class="space-y-2">`;
+            q.options.forEach((opt, idx) => {
+                html += `<button onclick="checkAnswer(${idx})" class="w-full text-left p-3 rounded-lg bg-sky-50 hover:bg-waterMain hover:text-white transition border border-sky-100 text-sm font-medium">${opt}</button>`;
+            });
+            html += `</div>`;
+            quizContainer.innerHTML = html;
+        }
+
+        function checkAnswer(selected) {
+            if (selected === quizData[currentQ].correct) {
+                score++;
+            }
+            currentQ++;
+            loadQuiz();
+        }
+
+        loadQuiz();
+
+        // Pledge Form Handler
+        document.getElementById('pledge-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('pledge-name').value.trim();
+            if (name) {
+                let countEl = document.getElementById('pledge-count');
+                countEl.innerText = (parseInt(countEl.innerText.replace(',', '')) + 1).toLocaleString();
+                document.getElementById('pledge-success').classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
